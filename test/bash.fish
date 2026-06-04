@@ -16,3 +16,6 @@ forge build
 REGISTRY=0x265BB2DBFC0A8165C9A1941Eb1372F349baD2cf1 \
 NETWORKS=base forge script script/DeployTraitGatedPredicate.s.sol --sig "run()" -vvv \
     --account beta-deployer --sender $DEPLOYER --broadcast --verify
+REGISTRY=0x265BB2DBFC0A8165C9A1941Eb1372F349baD2cf1 \
+NETWORKS=base forge script script/DeployERC20BalancePredicate.s.sol --sig "run()" -vvv \
+    --account beta-deployer --sender $DEPLOYER --broadcast --verify
