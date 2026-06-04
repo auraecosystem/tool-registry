@@ -1,5 +1,4 @@
 cp .env.example .env       # fill in BASE_RPC_URL, ETHERSCAN_API_KEY, and one of DEPLOYER (+ keystore) or DEPLOYER_PRIVATE_KEY
-cp fadaka.base.eth
 # Dry-run (simulation only)
 NETWORKS=base forge script script/Deploy.s.sol --sig "run()" -vvv
 
@@ -14,3 +13,6 @@ DEPLOYER_PRIVATE_KEY=0x... NETWORKS=base forge script script/Deploy.s.sol \
 cd packages/tool-registry
 forge install
 forge build
+REGISTRY=0x265BB2DBFC0A8165C9A1941Eb1372F349baD2cf1 \
+NETWORKS=base forge script script/DeployTraitGatedPredicate.s.sol --sig "run()" -vvv \
+    --account beta-deployer --sender $DEPLOYER --broadcast --verify
