@@ -11,3 +11,6 @@ NETWORKS=base forge script script/Deploy.s.sol --sig "run()" -vvv \
 # Broadcast + verify (raw private key — one-shot)
 DEPLOYER_PRIVATE_KEY=0x... NETWORKS=base forge script script/Deploy.s.sol \
     --sig "run()" -vvv --broadcast --verify
+cd packages/tool-registry
+forge install
+forge build
